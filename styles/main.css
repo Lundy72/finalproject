@@ -1,0 +1,463 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Main Elements */
+html {
+  background-image: url("../images/background.gif");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+header {
+  background-image: url("../images/header.png");
+  background-size: cover;
+  padding: 32px;
+}
+header h1 {
+  color: black;
+  font-size: 390%;
+  width: 58%;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0px 0px 10px rgba(143, 96, 253, 0.993);
+  margin: 40px 0;
+}
+header h1 a {
+  text-decoration: none;
+  color: black;
+}
+header img {
+  width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+
+main {
+  margin: 20px;
+}
+
+
+/* Welcome Page */
+#mainsection {
+  font-family: 'Poppins', sans-serif;
+  background-color: beige;
+  max-width: 65%;
+  width: 100%;
+  margin: 0 auto;
+  border: 3px solid silver;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+#mainsection h1 {
+  margin: 10px .5em 10px .5em;
+  text-decoration: underline;
+}
+#mainsection p {
+  font-size: larger;
+  margin: 10px 2em 40px 2em;
+}
+
+#welcomesection {
+  width: 100%;
+  margin-top: 100px;
+}
+#welcomesection h1 {
+  margin: 10px .5em 10px .5em;
+  text-decoration: underline;
+}
+#welcomesection h2 {
+  margin: 10px 2em 25px 1.6em;
+}
+#welcomesection img {
+  box-shadow: 0px 0px 5px 7px rgb(250, 100, 0);
+  margin-left: 25%;
+  width: 50%;
+}
+#welcomesection p {
+  font-size: larger;
+  margin: 10px 2em 40px 2em;
+  clear: both;
+}
+
+#games {
+  width: 95%;
+  margin: 20px auto;
+  border: 3px solid silver;
+  padding: 20px 1em 10px;
+  background-color: rgba(143, 96, 253, 0.993);
+  border-radius: 20px;
+}
+#games h1 {
+  margin: 10px .5em 10px .5em;
+  text-decoration: underline;
+}
+#games h2 {
+  margin: 10px 2em 10px 1.6em;
+}
+#games ul {
+  margin: 0 0 0 4em;
+}
+#games img {
+  box-shadow: 0px 0px 5px 7px rgb(250, 100, 0);
+  width: 25%;
+  float: right;
+  margin: 10px 5em;
+}
+#games p {
+  font-size: larger;
+  margin: 10px 2em 40px 2em; 
+}
+
+
+#videos {
+  background-color: beige;
+  max-width: 65%;
+  width: 100%;
+  border: 3px solid silver;
+  border-radius: 20px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+#videos h1 {
+  margin: 10px .5em 10px .5em;
+}
+#videos iframe {
+  margin: 10px 25% 40px 25%;
+  width: 50%;
+  height: 300px;
+}
+
+#construction {
+  width: 80%;
+  margin: 500px 10%;
+}
+
+
+/* Nav menu */
+.nav_menu {
+  border-top: 3px ridge gray;
+	border-bottom: 3px ridge gray;
+}
+.nav_menu ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0; 
+  position: relative;
+}
+.nav_menu ul li {
+	width: 25%;
+	background-color: black;
+	margin: 0;
+	text-align: center; 
+	transition: all .75s;
+}
+.nav_menu ul li a {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	text-decoration: none;
+	font-size: 170%;
+	color: rgb(250, 100, 0);
+	font-weight: bold;
+	font-variant: small-caps;
+	transition: all .75s;
+}
+.nav_menu ul li:hover > ul {
+  display: block; 
+} 
+.nav_menu ul li a:hover {
+	background-color: rgb(250, 100, 0);
+	color: black;
+}
+.nav_menu > ul::after {
+  content: ""; 
+  display: block;
+  clear: both; 
+}
+.nav_menu ul li { 
+  float: left; 
+} 
+
+/* Dropdown Menu */
+.nav_menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 50%;
+  border-left: 3px solid gray;
+}
+.nav_menu ul ul li { 
+  float: none;
+  border-right: 3px solid gray;
+  position: relative;
+}
+.nav_menu ul ul li ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 405%;
+}
+
+#first_item {
+  border-top: 3px solid gray;
+}
+#last_item {
+  border-bottom: 3px solid gray;
+}
+
+
+/* Sidebar Menu */
+.bookmarks {
+  float: left;
+	width: 12%;
+	margin: 10em 2em 0 2em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+}
+.bookmarks ul {
+	list-style: none;
+	width: 95%;
+	margin: 2em 0 0 0;
+}
+.bookmarks ul li {
+	margin: 0 1em 8px 0;
+	transition: all .5s;
+}
+.bookmarks ul li a {
+	padding: .5em .5em;
+	display: block;
+	background-color: rgb(250, 100, 0);
+	border: 1px solid #808080;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .5s;
+}
+.bookmarks ul li a:hover {
+  box-shadow: 0px 0px 5px 7px rgb(250, 100, 0);
+  background-color: black;
+  color: rgb(250, 100, 0);
+}
+.bookmarks ul li:hover {
+	margin: 0 0 8px 1em;
+}
+
+
+/* Scroll to Top Button */
+#myBtn {
+	display: none; /* Hidden by default */
+	width: 90%;
+	z-index: 99; /* Make sure it does not overlap */
+	border: 1px solid #808080;
+	outline: none; /* Remove outline */
+	background-color: rgb(250, 100, 0); /* Set a background color */
+	color: black; /* Text color */
+	font-weight: bold;
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: .5em .5em;
+	margin: 0 2em 3px 0;
+	text-align: left;
+	transition: all .5s;
+  font-family: 'Orbitron', sans-serif;
+	font-size: 100%;
+	border-radius: 5px;
+}
+#myBtn:hover {
+	background-color: black;
+  box-shadow: 0 0 5px 7px rgb(250, 100, 0);
+	color: rgb(250, 100, 0);
+	margin: 0 0 8px 1em;
+	border: 1px solid rgb(250, 100, 0);
+}
+
+
+/* Gallery Page */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin: 0 auto;
+}
+.column { /* Create four equal columns that sits next to each other */
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 15px;
+  border: 3px ridge silver;
+  box-shadow: 0px 0px 5px 2px rgb(250, 100, 0);
+}
+
+
+/* Footer */
+footer {
+  clear: both;
+  background-color: rgb(250, 100, 0);
+  border-top: 3px ridge silver;
+  border-bottom: 1px solid rgb(250, 100, 0);
+}
+footer p {
+  text-align: center;
+  margin: 80px 0;
+  color: white;
+}
+
+
+/* Hides Slicknav on full screen */
+.slicknav_menu {
+	display: none;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1215px) {
+	
+	/* remove the sidebar from the homepage and make the rest of the page full width */
+	.bookmarks {
+		display: none;
+	}
+	#mainsection, #welcomesection {
+		float: none;
+		width: 99%;
+		margin: 0 auto;
+	}
+
+}
+
+/* Up to 950px */
+@media only screen and (max-width: 950px) {
+  /*  Removed float from header image, display as block and auto margins to center in display  */
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+}
+/* Up to 850px */
+@media only screen and (max-width: 850px) {
+	
+	/* image gallery - drop down from 4 columns to 3 columns */
+	.column {
+		flex: 33.3%;
+		max-width: 33.3%;
+	}
+	.pimgLeft img, .pimgRight img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+	
+}
+
+/* Up to 767 px */
+@media only screen and (max-width: 767px) {
+	
+	/*  Hide the navigation menu and display the slicknav compact menu  */
+	.nav_menu {
+		display: none;
+	}
+	.slicknav_menu {
+		display: block;
+		background-color: black !important;
+	}
+	.slicknav_menu ul li a {
+		color: red !important;
+		font-size: 120% !important;
+	}
+	
+	/*  Increase body and main width and decrease font size  */
+	body, main {
+		width: 100%;
+		font-size: 85%;
+	}
+	
+	/*  Removed float from header image, display as block and auto margins to center in display  */
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+	h1 {
+		font-size: 120%;
+		text-align: center;
+	}
+	
+	/*  Remove float from section and increase width to 100%  */
+	section {
+		float: none;
+		width: 100%;
+		margin: 1em 0 2em;
+	}
+	
+	/*  Hide the bookmarks sidebar  */
+	.bookmarks {
+		display: none;
+	}
+	
+	/*  Increase width of article and div to 100%, remove side margins and side padding and remove border radius  */
+  div {
+		width: 100%;
+		margin: 0 0 2em;
+		padding: 2em 0;
+		border-radius: 0;
+	}
+	
+	/*  reset the "twocol" class to one column  */
+	.twocol {
+		font-size: 80%;
+		column-count: 1;
+	}
+	
+	/*  Gallery page - reset to 2 columns  */
+	.column {
+		flex: 50%;
+		max-width: 50%;
+		padding: 0;
+	}
+	.row {
+		padding: 0;
+	}
+
+}
+/* Up to 600px */
+@media (max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.column img {
+		border: 0;
+		border-radius: 0;
+	}
+}
